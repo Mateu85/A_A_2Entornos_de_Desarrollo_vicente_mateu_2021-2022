@@ -31,9 +31,22 @@ public class OptionsMenu {
             option = Scanner.nextLine();
 
             switch(option) {
+                case "1":
+                    addTask();
+                    break;
 
             }
         } while (!option.equals("6"));
+    }
+    public void addTask() {
+        System.out.print("Title: ");
+        String title = Scanner.nextLine();
+        System.out.print("Task Description: ");
+        String Description = Scanner.nextLine();
+        System.out.print("Location: ");
+        String taskLocation = Scanner.nextLine();
+        Task task = new Task(title.trim(), Description.trim(), taskLocation.trim());
+        catalogTasks.add(task);
     }
 
 
