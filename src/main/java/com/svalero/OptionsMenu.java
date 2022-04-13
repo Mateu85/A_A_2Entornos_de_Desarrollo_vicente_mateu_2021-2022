@@ -43,6 +43,9 @@ public class OptionsMenu {
                 case "4":
                     modifyTask();
                     break;
+                case "5":
+                    showTaskList();
+                    break;
 
             }
         } while (!option.equals("6"));
@@ -109,6 +112,14 @@ public class OptionsMenu {
         if (!modified)
             System.out.println("No se ha encontrado el libro");
 
+    }
+
+    public void showTaskList() {
+        for (Task task : catalogTasks) {
+            System.out.println(task.getTitle());
+            System.out.println(task.getDescription());
+            System.out.println(task.getLocation());
+        }
     }
 
 
