@@ -37,6 +37,9 @@ public class OptionsMenu {
                 case "2":
                     findTask();
                     break;
+                case "3":
+                    deleteTask();
+                    break;
 
             }
         } while (!option.equals("6"));
@@ -68,6 +71,16 @@ public class OptionsMenu {
 
         if (!found)
             System.out.println("No se ha encontrado ningún libro");
+    }
+
+    public void deleteTask() {
+        System.out.print("Titulo del libro a eliminar:");
+        String titulo = Scanner.nextLine();
+        boolean eliminado = catalogTasks.removeIf(task -> task.getTitle().equals(titulo));
+        if (eliminado)
+            System.out.println("Libro eliminado correctamente");
+        else
+            System.out.println("No se ha podido eliminar. El libro no existe");
     }
 
 
