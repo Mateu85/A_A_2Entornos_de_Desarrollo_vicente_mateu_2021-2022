@@ -16,7 +16,7 @@ public class OptionsMenu {
 
     public void mostrarMenu() {
 
-        //generateTaskList();
+        generateTaskList();
         String option = null;
 
         do {
@@ -121,6 +121,11 @@ public class OptionsMenu {
             System.out.println(task.getLocation());
         }
     }
+
+    public void generateTaskList() {
+    }
+
+
 
 
 }
