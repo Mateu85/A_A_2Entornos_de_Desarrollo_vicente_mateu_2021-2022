@@ -24,12 +24,8 @@ Este proyecto se basa en una aplicación web diseñada para encontrar solución 
 
 -   Repositorio en **GitHub** para almacenar el código del proyecto de forma que dispongan de las ramas **master y develop**. Configura también el fichero **README.md** del repositorio
 
-```mermaid
-graph LR
-A((v.0.1)) -- v0.1- v0.2--> B((Master))
-A --> C((Develop))
 
-```
+![enter image description here](https://res.cloudinary.com/practicaldev/image/fetch/s--snNDvtg---/c_limit,f_auto,fl_progressive,q_auto,w_880/https://miro.medium.com/max/823/1*uUpzVOpdFw5V-tJ_YvgFmA.png)
 
 
 
