@@ -123,6 +123,10 @@ public class OptionsMenu {
     }
 
     public void generateTaskList() {
+        catalogTasks.add(new Task(
+                "Car Clean 5€ H",
+                "Need somebody who´s wiling to clean my car every week.",
+                "WC1H 8AS"));
     }
 
 
