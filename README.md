@@ -25,6 +25,7 @@
 - Instalacion de VisualVM  para la  monitorizacion  del rendimiento y el uso de memoria de la aplicación
 - Se ha añadido un  release del proyecto al repositorio para que los usuarios puedan
 descargarse la aplicación para usarla directamente
+- [GitHub Pages Template](https://mateu85.github.io/A_A_2Entornos_de_Desarrollo_vicente_mateu_2021-2022/)
 
 
 ## Aplicación  HandyPerson 
