@@ -35,7 +35,7 @@ public class OptionsMenu {
                     addTask();
                     break;
                 case "2":
-                    //findTask();
+                    findTask();
                     break;
                 case "3":
                     //deleteTask();
@@ -60,6 +60,24 @@ public class OptionsMenu {
         String taskLocation = Scanner.nextLine();
         Task task = new Task(title.trim(), Description.trim(), taskLocation.trim());
         catalogTasks.add(task);
+    }
+
+    public void findTask() {
+        boolean found = false;
+        System.out.print("Search by titile: ");
+        String titulo = Scanner.nextLine();
+        for (Task task : catalogTasks) {
+            if (task.getTitle().contains(titulo)) {
+                System.out.println("Libro encontrado");
+                System.out.println(task.getTitle());
+                System.out.println(task.getDescription());
+                System.out.println(task.getLocation());
+                found = true;
+            }
+        }
+
+        if (!found)
+            System.out.println("No se ha encontrado ningún libro");
     }
 
 
