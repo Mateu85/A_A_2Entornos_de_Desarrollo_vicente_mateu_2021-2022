@@ -16,7 +16,7 @@ public class OptionsMenu {
 
     public void mostrarMenu() {
 
-       // generateTaskList();
+        //generateTaskList();
         String option = null;
 
         do {
@@ -44,7 +44,7 @@ public class OptionsMenu {
                     modifyTask();
                     break;
                 case "5":
-                    //showTaskList();
+                    showTaskList();
                     break;
 
             }
@@ -113,6 +113,14 @@ public class OptionsMenu {
         if (!modified)
             System.out.println("No se ha encontrado el libro");
 
+    }
+
+    public void showTaskList() {
+        for (Task task : catalogTasks) {
+            System.out.println(task.getTitle());
+            System.out.println(task.getDescription());
+            System.out.println(task.getLocation());
+        }
     }
 
 
