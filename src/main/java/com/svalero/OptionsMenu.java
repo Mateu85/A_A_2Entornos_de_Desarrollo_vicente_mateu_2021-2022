@@ -16,7 +16,7 @@ public class OptionsMenu {
 
     public void mostrarMenu() {
 
-       // generateTaskList();
+        //generateTaskList();
         String option = null;
 
         do {
@@ -38,13 +38,13 @@ public class OptionsMenu {
                     findTask();
                     break;
                 case "3":
-                    //deleteTask();
+                    deleteTask();
                     break;
                 case "4":
                     modifyTask();
                     break;
                 case "5":
-                    //showTaskList();
+                    showTaskList();
                     break;
 
             }
@@ -80,6 +80,16 @@ public class OptionsMenu {
             System.out.println("No se ha encontrado ningún libro");
     }
 
+    public void deleteTask() {
+        System.out.print("Titulo del libro a eliminar:");
+        String titulo = Scanner.nextLine();
+        boolean eliminado = catalogTasks.removeIf(task -> task.getTitle().equals(titulo));
+        if (eliminado)
+            System.out.println("Libro eliminado correctamente");
+        else
+            System.out.println("No se ha podido eliminar. El libro no existe");
+    }
+
     public void modifyTask() {
         boolean modified = false;
         System.out.print("Titulo del libro a modificar: ");
@@ -103,6 +113,14 @@ public class OptionsMenu {
         if (!modified)
             System.out.println("No se ha encontrado el libro");
 
+    }
+
+    public void showTaskList() {
+        for (Task task : catalogTasks) {
+            System.out.println(task.getTitle());
+            System.out.println(task.getDescription());
+            System.out.println(task.getLocation());
+        }
     }
 
 
